@@ -1,6 +1,7 @@
 import React from 'react'
 import Hello from './components/hello'
 import Popular from './components/Popular'
+import Battle from './components/Battle'
 import ReactDOM from 'react-dom'
 import './index.css'
 
@@ -14,15 +15,16 @@ export default class App extends React.Component {
 
     return (
       <React.Fragment>
-      <Hello
-        name={name}
-        authed={isAuthed()}
-        logout={() => alert('Logged Out!')}
-        header={<h1>Welcome back!</h1>}
-      />
-      <div className='container'>
-        <Popular/>
-      </div>
+        <Hello
+          name={name}
+          authed={isAuthed()}
+          logout={() => alert('Logged Out!')}
+          header={<h1>Welcome back!</h1>}
+        />
+        <div className='container'>
+          <Popular/>
+          <Battle/>
+        </div>
       </React.Fragment>
     )
   }
